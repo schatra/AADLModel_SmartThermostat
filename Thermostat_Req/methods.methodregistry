@@ -1,0 +1,11 @@
+verification methods resoluteMethods: "Activities for Thermostat Requirements" [
+	
+	method enforcePeriod:"Check all sensor's time period"[
+	resolute SystemWideReq1
+	]	
+	
+	method enforcePower:"Check all buses have power capacity"[
+	resolute SystemWideReq2
+	]
+	
+]

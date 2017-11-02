@@ -1,0 +1,20 @@
+organization SmartThermostatSystem
+stakeholder user [
+	full name "Sravani chatrathi"
+	title "Student"
+	email "schatra@g.clemson.edu"
+]
+
+
+
+stakeholder  Developer [
+	full name "Siri Shastry Uday"
+	title "Student"
+	email "sshastr@g.clemson.edu"
+]
+
+stakeholder  Tester [
+	full name "Varsha Chauhan"
+	title "Student"
+	email "varshac@g.clmeson.edu"
+]

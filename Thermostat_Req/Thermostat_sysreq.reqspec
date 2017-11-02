@@ -1,0 +1,81 @@
+system requirements sysreq
+for thermostat ::thermostat.impl  
+[
+
+	val spark_detected: real = 5 
+	val alarm_triggered: real= 10
+	val battery: real = 10
+	val no_of_failures : real= 0
+	val temperature : real = 100
+	
+	
+	
+	
+	requirement R1
+	[
+		description this "spark inside the thermostat should be triggered by an alarm and thermostat automatically switches off"
+		rationale "The spark inside the thermostat could possibly cause a fire"
+		value predicate spark_detected
+		see goal Thermostat_Goals.Goal3
+	]
+	
+	requirement R2
+	[
+		description this "Home owner can set the temperature of the thermostat through LCD screen/mobile app"
+		rationale "home owner should be able to chnage or set the desired temperature easily" 
+            value predicate temperature        
+		see goal Thermostat_Goals.Goal4
+	]
+	
+	requirement R3
+	[
+		description this "Themostat should work according to the different modes set by the user"
+		see goal Thermostat_Goals.Goal2
+	]
+	
+	
+	requirement R4
+	[
+		description this "Thermostat can set different temperatures at different locations in the house through the mobile app"
+		see goal Thermostat_Goals.Goal6
+	]
+	
+	requirement R5
+	[
+		description this "The app should be able to set default temperatures at particular times during day or night"
+		see goal Thermostat_Goals.Goal2
+	]
+	
+	
+	requirement R6
+	[
+	description this "Home owner is notified when the battery level of thermostat is low"
+	value predicate battery
+	see goal Thermostat_Goals.Goal5	
+	] 
+
+   requirement R7
+	[
+	description this "Respective Authority or department is notified of the smoke/intrusion detection via the remote alarm trigger or home owner notification"
+	value predicate alarm_triggered
+	see goal Thermostat_Goals.Goal2
+	] 
+
+	requirement R8
+	[
+	description this "sensor should acquire the aproximate value of the temperature in the house from surroundings "
+	value predicate temperature
+		see goal Thermostat_Goals.Goal1
+	]
+	
+	requirement robust_R10
+	[
+		description this "The  system should have a well-defined error model"
+		rationale "Since the system is used for warming/cooling, it should be highly reliable and error-free and fault-tolerant"
+		value predicate no_of_failures
+		see goal Thermostat_Goals.Goal5
+	]
+	
+	]
+	
+	

@@ -1,0 +1,37 @@
+stakeholder goals Thermostat_Goals for IntegratedSystem :: Thermostat.impl [
+
+	goal Goal1 : "Data Acquisition" [
+		description "Using the sensors, the temperature in the house must be detected for further use"
+		rationale "Temperature data acquired from other systems is used by the thermostat system for setting the required temperature"
+		stakeholder SmartThermostatSystem.user SmartThermostatSystem.Developer SmartThermostatSystem.Tester
+	]
+	
+	goal Goal2: "Correctness"[
+		description "The house temperature must be set to the value that the user enters"
+		rationale "It is of no use if the desired temperature is not equal to the temperature set by the thermostat"
+		stakeholder SmartThermostatSystem.user SmartThermostatSystem.Developer SmartThermostatSystem.Tester
+	]
+	
+	goal Goal3: "Safety"[
+		description "Thermostat should be able to shutdown automatically on detection of spark"
+		rationale "Ensuring safety in case of emergencies by shutting down of the system automatically"
+		stakeholder SmartThermostatSystem.user SmartThermostatSystem.Developer SmartThermostatSystem.Tester
+	]
+	
+	goal Goal4: "Usability"[
+		description "System should be easy to use"
+		rationale "User should be able to change/set the temperature easily"
+		stakeholder SmartThermostatSystem.user SmartThermostatSystem.Developer SmartThermostatSystem.Tester
+	]
+	
+	goal Goal5: "Reliability"[
+		description "System will be reliable"
+		rationale "Any failure, frustrates the user as the undesired temperature irritates the people in the house"
+		stakeholder SmartThermostatSystem.user SmartThermostatSystem.Developer SmartThermostatSystem.Tester
+	]
+	goal Goal6: "Efficiency"[
+		description "System should work efficiently as desired"
+		rationale "Any failure, frustrates the user as the undesired temperature irritates the people in the house"
+		stakeholder SmartThermostatSystem.user SmartThermostatSystem.Developer SmartThermostatSystem.Tester
+	]
+	]

@@ -1,0 +1,25 @@
+
+verification methods ThermostatVerficationMethods : "Verification Methods for sysreq" [
+	method alarmtrigger (a: real)boolean : "Trigger alarm on detection of spark" [
+		java Thermstatverify.Thermstatverify.alarmtrigger(double a)
+		description "Test to check if alarm works"
+	]
+	
+	method Tempset (a: real)boolean : "To set the exact temperature" [
+		java Thermstatverify.Thermstatverify.Tempset(double a)
+		description "Test for accurate temperature measure"
+	]
+	
+	method batterystatus (a: real)boolean : "Battery status to warn the user" [
+		java Thermstatverify.Thermstatverify.batterystatus(double a)
+		description "Test to warn the user about battery status"
+	]
+	method sensortemp (a: real)boolean : "Sensing the outside temperature" [
+		java Thermstatverify.Thermstatverify.sensortemp(double a)
+		description "Test to check if sensors senses the correct temperature"
+	]
+	method robust (a: real)boolean : " system end-to-end latency" [
+		java Thermstatverify.Thermstatverify.robust(double a)
+		description "Test of system end-to-end latency"
+	]
+]

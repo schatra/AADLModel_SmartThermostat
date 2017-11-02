@@ -1,0 +1,33 @@
+assurance case ThermostatAssuranceCase:"Assurance case for smart Thermostat System" for thermostat_arch::thermostat[
+
+assurance plan ThermostatAssurancePlan: "The assurance case for the Thermostat implementation" 
+for thermostat_arch::thermostat.impl [
+	
+	issues "This assurance plan is related to the assurance case for Thermostat "
+]
+
+assurance task at_1: "This task is for Smoke Detector"[
+	description"The smoke detector should detect smoke or fire accurately and quickly"
+	category therm.arm therm.disarm
+] 
+
+assurance task at_2: "This task is for "[
+	description"The intruder detector should detect motion accurately and quickly"
+	category therm.arm therm.disarm
+] 
+
+assurance task at_3: "This task is for any indicating the battery status"[
+	description"The Battery when low it should be notified to the user through mobile app"
+	category therm.arm therm.disarm
+] 
+
+assurance task at_4: "This task is for Home Owner/Authority Notification"[
+	description"The Home Owner and Respective Authority should be notified of an alarm trigger event quickly"
+	category therm.arm therm.disarm
+] 
+
+assurance task at_5: "This task is for System Robustness"[
+	description"The system failure rate should be approximately 0"
+	category therm.arm therm.disarm
+] 
+]

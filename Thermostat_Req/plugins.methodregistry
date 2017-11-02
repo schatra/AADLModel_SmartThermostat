@@ -1,0 +1,5 @@
+verification methods Plugins[
+	method ElectricalPower: "Power consumption check"[
+		plugin PowerAnalysis
+	]
+]

@@ -1,0 +1,49 @@
+verification plan ThermostatPlan for sysreq[
+	claim R1 :"Thermostat detects spark " [
+		
+			rationale "The spark inside the thermostat could possibly cause a fire"
+		activities 
+		Alarmtest : "Test for spark with alarm Ring " :
+		ThermostatVerficationMethods.alarmtrigger(spark_detected)
+
+	]
+	claim R2 [
+		rationale "home owner should be able to change or set the desired temperature easily"
+		activities 
+		Test1 : "Test for Accurate Temperature setting" :
+		ThermostatVerficationMethods.Tempset(temperature)
+	]
+	claim R3 [
+		
+	]
+	claim R4 [
+	] 
+	claim R5 [
+		
+	] 
+	claim R6 [
+		activities 
+		Test2 : "Test for checking Battery status" :
+		ThermostatVerficationMethods.batterystatus(battery)
+		power_usage: "test for power consumption" :
+		Plugins.ElectricalPower()
+	] 
+	claim R7 [
+		activities
+		test3 : "Test for notifying the user" :
+		ThermostatVerficationMethods.alarmtrigger(alarm_triggered)
+	] 
+	claim R8 [
+		activities
+		test4 : "Test for checking if sensors senses the exact temperature" :
+		ThermostatVerficationMethods.sensortemp(temperature)
+	] 
+	 
+		claim robust_R10
+	[
+		activities
+		Robustness_Test : "Test of system end-to-end latency":
+			ThermostatVerficationMethods.robust(no_of_failures)
+	]
+	
+]
